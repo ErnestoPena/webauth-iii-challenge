@@ -8,7 +8,7 @@ exports.up = function(knex) {
        .createTable('users', tbl=> {
         tbl.increments('id');
         tbl.string('username', 255).notNullable().unique();
-        tbl.string('password', 30).notNullable();
+        tbl.string('password', 255).notNullable();
         tbl.integer('department_id').notNullable()
           .references('id').inTable('departments')
           .onUpdate('NO ACTION')

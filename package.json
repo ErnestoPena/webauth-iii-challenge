@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/ErnestoPena/webauth-iii-challenge#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "knex": "^0.19.2",
     "knex-cleaner": "^1.3.0",
     "nodemon": "^1.19.1",

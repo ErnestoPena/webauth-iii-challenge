@@ -10,5 +10,5 @@ function insertUser(user) {
 }
 
 function findUserName(username) {
-    return userDB.select('username').from('users').where('username' , '=' , username);
+    return userDB('users').where('username' , '=' , username);
 }
