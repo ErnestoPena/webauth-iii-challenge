@@ -1,0 +1,27 @@
+{
+  "name": "webauth-iii-challenge",
+  "version": "1.0.0",
+  "description": "## Topics",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon /server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErnestoPena/webauth-iii-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErnestoPena/webauth-iii-challenge/issues"
+  },
+  "homepage": "https://github.com/ErnestoPena/webauth-iii-challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "knex": "^0.19.2",
+    "knex-cleaner": "^1.3.0",
+    "nodemon": "^1.19.1",
+    "sqlite3": "^4.1.0"
+  }
+}
