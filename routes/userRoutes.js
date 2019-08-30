@@ -1,7 +1,7 @@
 const express = require('express');
 const userRoutes = express.Router();
 const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
+const genToken = require('../token/genToken');
 
 const userDB = require('../data/user-db');
 
@@ -29,15 +29,9 @@ userRoutes.post('/login' , verifyLogin , async (req,res) => {
         console.log(verifyPassword, 'this is the verified password');
         if (verifyPassword) {
            try {
-              const payload = { username: newUser.username };
-              const secret= "thisismyhardsecret";
-              const options= {
-                     algorithm: "HS256",
-                    expiresIn: '1h'
-                }
-            const token = jwt.sign(payload , secret , options);
-            console.log(token);
-            res.status(201).json(`Welcome back, ${req.returnedUser.username}`);
+
+            const token = genToken(newUser)
+            res.status(201).json(`Welcome back, ${req.returnedUser.username} your token is ${token}`);
            }
            catch (err) {
               res.status(500).json({message:`Something went wrong with your ${req.method} request`})

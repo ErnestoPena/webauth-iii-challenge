@@ -1,6 +1,7 @@
 const express = require('express');
 const server = express();
 const port = 9000;
+const jsontoken = require('jsonwebtoken');
 
 const protectedRoutes = require('./routes/protectedRoutes');
 const userRoutes = require('./routes/userRoutes');
